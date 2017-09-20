@@ -19,7 +19,11 @@ namespace Strategy
 
         public string Parse(string source)
         {
-            return "";
+            _dfs.Open(source);
+            string data = _dfs.Read();
+            string parsedData = _ps.Parse(data);
+            _dfs.Close();
+            return parsedData;
         }
     }
 }

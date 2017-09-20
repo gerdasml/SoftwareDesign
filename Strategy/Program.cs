@@ -10,6 +10,8 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
+            var parser1 = new Parser(new XmlParsingStrategy(), new DatabaseDataFetcherStrategy());
+            var result = parser1.Parse("kazkas");
         }
     }
 }

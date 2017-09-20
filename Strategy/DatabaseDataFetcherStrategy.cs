@@ -22,6 +22,7 @@ namespace Strategy
             // Here should be implementation
             string xmlData = "<text>Here should be XML.</text>";
             //string csvData = "H1,H2,H3\nData11,Data12,Data13\nData21,Data22,Data23";
+            //Console.WriteLine("Fetched CSV: " + csvData);
             Console.WriteLine("Fetched XML: "+xmlData);
             return xmlData;
         }
