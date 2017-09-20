@@ -4,23 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TemplateMethod
+namespace Strategy
 {
-    abstract class StatisticsManager
+    class StatisticsManager
     {
+        private DataFetcherStrategy _dfs;
+
+        public StatisticsManager(DataFetcherStrategy dfs)
+        {
+            _dfs = dfs;
+        }
+
         public int GetUpServiceCount(string source)
         {
             Random rnd = new Random();
             int upCount = rnd.Next(1, 100);
-            Open(source);
-            string data = Read();
-            Close();
+            _dfs.Open(source);
+            string data = _dfs.Read();
+            _dfs.Close();
             Console.WriteLine("Number of services that are up: " + upCount);
             return upCount;
         }
-
-        protected abstract void Open(string source);
-        protected abstract string Read();
-        protected abstract void Close();
     }
 }

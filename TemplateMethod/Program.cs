@@ -10,8 +10,11 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
-            var parser = new CsvToJsonFromFileParser();
-            parser.Parse("path/to/database");
+            //var parser = new CsvToJsonFromFileParser();
+            //parser.Parse("path/to/database");
+
+            var manager = new StatisticsFromDatabaseManager();
+            manager.GetUpServiceCount("path/to/database");
         }
     }
 }
