@@ -49,6 +49,9 @@
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticsFromDatabaseManager.cs" />
+    <Compile Include="StatisticsFromFileManager.cs" />
+    <Compile Include="StatisticsManager.cs" />
     <Compile Include="XmlToJsonFromDatabaseParser.cs" />
     <Compile Include="XmlToJsonFromFileParser.cs" />
   </ItemGroup>
